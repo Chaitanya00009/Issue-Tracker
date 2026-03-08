@@ -4,6 +4,8 @@ const server = express();
 const dbConnection = require("./config/db.js");
 const logger = require("./middleware/logger.js");
 
+const PORT = process.env.PORT || 3000;
+
 //To parse the Json
 server.use(express.json());
 
@@ -23,8 +25,12 @@ server.use("/issues", routes);
 async function startServer() {
   try {
     await dbConnection();
-    server.listen(5000, () => {
-      console.log("The server is up and running on 5000 port");
+    // server.listen(5000, () => {
+    //   console.log("The server is up and running on 5000 port");
+    // });
+
+    server.listen(PORT, () => {
+      console.log(`Server running on ${PORT}`);
     });
   } catch (err) {
     console.log("Db connection failed", err);
