@@ -1,0 +1,26 @@
+{
+  "name": "issue-tracker",
+  "version": "1.0.0",
+  "description": "This is a back-end project to track/update/delete ongoing issues ",
+  "homepage": "https://github.com/Chaitanya00009/Issue-Tracker#readme",
+  "bugs": {
+    "url": "https://github.com/Chaitanya00009/Issue-Tracker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chaitanya00009/Issue-Tracker.git"
+  },
+  "license": "ISC",
+  "author": "Chaitanya",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.2.3",
+    "nodemon": "^3.1.14"
+  }
+}
