@@ -18,6 +18,17 @@ Note: Since the API is hosted on Render's free tier, the first request may take 
 
 ---
 
+## Features
+
+- Create new issues
+- Retrieve all issues
+- Delete issues by ID
+- Search issues using query parameters
+- Pagination support for large datasets
+- RESTful API design
+
+---
+
 ## Tech Stack
 
 - Node.js
@@ -33,13 +44,16 @@ Note: Since the API is hosted on Render's free tier, the first request may take 
 ## API Endpoints
 
 GET /issues  
-Returns all issues
+Returns all issues with support for search and pagination.
+
+Example:
+GET /issues?search=login&page=1&limit=5
 
 POST /issues  
-Creates a new issue
+Creates a new issue.
 
 DELETE /issues/:id  
-Deletes an issue by ID
+Deletes an issue by ID.
 
 ---
 
